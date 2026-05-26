@@ -3,39 +3,38 @@
 Position new tabs to the immediate right of the current tab in Safari on macOS (Tahoe 26)
 
 <br>
+<br>
 
 ***For tabs opened with URLs***
 ###
-Open Terminal and run the following commands – then restart Safari
+1. Run the following Terminal commands
 ~~~flf
 defaults write -app safari WBSNewTabPositionPreferenceKey -int 0
 ~~~
 ~~~flf
 defaults write -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -int 1
 ~~~
+<sup>If you  get a “Could not write domain” error, [see here](https://github.com/paralevel/useful-disk-access-for-terminal)</sup>
 
-<sup>(If the commands gives you  a `Could not write domain` error, [see here](https://github.com/paralevel/useful-disk-access-for-terminal))</sup>
-
-To revert to default tab opening behavior:
+2. Restart Safari
+<br>
 
 <sub>
 
+To revert:
 ~~~
-defaults delete -app safari WBSNewTabPositionPreferenceKey
-~~~
-
-~~~
-defaults delete -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey
+defaults delete -app safari WBSNewTabPositionPreferenceKey; defaults delete -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey
 ~~~
 
 </sub>
 
 <br>
+<br>
 
 ***For blank tabs***
 ###
-
-The previous settings don’t apply to new _blank_ tabs unfortunately, so a workaround is needed: <sub>(although there's a `WBSNewBlankTabPositionAppliesToAllBlankTabsPreferenceKey` key, setting it to `true` doesn't do the trick, even when also setting another related key, `WBSTabOrderManagerSuppressRelatingNewBlankTabsPreferenceKey`, to `true`)</sub>
+ 
+The previous settings don’t apply to new _blank_ tabs unfortunately – although there‘s a “WBSNewBlankTabPositionAppliesToAllBlankTabsPreferenceKey” setting, enabling it doesn’t change the default behavior, even when also enabling the related “WBSTabOrderManagerSuppressRelatingNewBlankTabsPreferenceKey” setting – but you can instead use the following workaround:
 
 1. Download Keyboard Cowboy: https://zenangst.github.io/app/keyboardcowboy/index.html
 2. Install and launch it<br>
