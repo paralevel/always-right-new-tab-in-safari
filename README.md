@@ -8,7 +8,7 @@ Position new tabs to the immediate right of the current tab in Safari on macOS
 ***For tabs opened with URLs***
 ###
 <ol>
-<li>Run the following Terminal commands
+<li>Run the following Terminal commands<br><br>
 
 ~~~flf
 defaults write -app safari WBSNewTabPositionPreferenceKey -int 0
@@ -16,10 +16,9 @@ defaults write -app safari WBSNewTabPositionPreferenceKey -int 0
 ~~~flf
 defaults write -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -int 1
 ~~~
-<sup>If you  get a “Could not write domain” error, [see here](https://github.com/paralevel/useful-disk-access-for-terminal)</sup></li>
+<sub>If you  get a “Could not write domain” error, [see here](https://github.com/paralevel/useful-disk-access-for-terminal)</sub></li>
 
-<li>Restart Safari</li>
-</ol>
+<li>Restart Safari
 <br>
 
 <sub>To revert:</sub>
@@ -30,9 +29,8 @@ defaults write -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -i
 defaults delete -app safari WBSNewTabPositionPreferenceKey; defaults delete -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey
 ~~~
 
-</sup>
-
-<br>
+</sup></li>
+</ol>
 
 ***For blank tabs***
 ###
