@@ -1,11 +1,10 @@
 # Always Right New Tab in Safari
-
-Position new tabs to the immediate right of the current tab in Safari on macOS
-
-<sub>_System Requirements: macOS Tahoe 26_</sub>
-
+<sup>_System Requirements: macOS Tahoe 26_</sup>
 <br>
-
+<br>
+Position new tabs to the immediate right of the current tab in Safari on macOS
+<br>
+<br>
 ***For tabs opened with URLs***
 ###
 Run the following Terminal commands and restart Safari afterwards:
