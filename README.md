@@ -1,8 +1,8 @@
-# Open tabs to the right of current tab in Safari
+# Always Right New Tab in Safari
+Position new tabs to the immediate right of the current tab in Safari on macOS
 
-Position new tabs to the immediate right of the current tab in Safari on macOS Tahoe 26
+<sub>_System Requirements: macOS Tahoe 26_</sub>
 
-<br>
 <br>
 
 ***For tabs opened with URLs***
@@ -27,8 +27,6 @@ defaults delete -app safari WBSNewTabPositionPreferenceKey; defaults delete -app
 ~~~
 
 </sub>
-
-<br>
 <br>
 
 ***For blank tabs***
