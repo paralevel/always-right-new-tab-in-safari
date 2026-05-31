@@ -7,24 +7,14 @@ Position new tabs to the immediate right of the current tab in Safari on macOS
 <br>
 ***For tabs opened with URLs***
 ###
-Run the following Terminal commands and restart Safari afterwards:
-~~~flf
-defaults write -app safari WBSNewTabPositionPreferenceKey -int 0
-~~~
-~~~flf
-defaults write -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -int 1
-~~~
+Run the following Terminal command and restart Safari afterwards:
+<pre><code><tt>defaults write -app safari WBSNewTabPositionPreferenceKey -int 0; defaults write -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey -int 1</tt></code></pre>
 <sub>If you  get a “Could not write domain” error, [see here](https://github.com/paralevel/useful-disk-access-for-terminal)</sub>
 
+<i>
 <sub>To revert:</sub>
-
-<sup>
-	
-~~~
-defaults delete -app safari WBSNewTabPositionPreferenceKey; defaults delete -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey
-~~~
-
-</sup>
+<pre><code><tt>defaults delete -app safari WBSNewTabPositionPreferenceKey; defaults delete -app safari WBSNewTabPositionAppliesToSpawnedTabsPreferenceKey</tt></code></pre>
+</i>
 
 ***For blank tabs***
 ###
@@ -61,11 +51,10 @@ _<ol>In the rightmost panel</ol>_
 tell front window of application "Safari"
 	set _new to make new tab at after (get current tab)
 	set current tab to _new
-	# make sure the 'New tabs/windows open with' settings are applied by using x-safari-https:// as url
-	set URL of _new to "x-safari-https://"
+	set URL of _new to "favorites://"
 end tell
 ~~~
-17. Close the Keyboard Cowboy window to remove it from the Dock – but _do not_ press <kbd>command</kbd> <kbd>Q</kbd> – if you do that the menu bar process quits too
+17. Close the Keyboard Cowboy window to remove it from the Dock – do _not_ press <kbd>command</kbd> <kbd>Q</kbd> or the menu bar process quits too!
 18. Open Safari and check if the keyboard shortcut works
 19. The first time the keyboard shortcut triggers the assigned script, click “Allow” in the dialog that opens asking you to allow “Keyboard Cowboy.app” to control “Safari.app”
 20. Make Keyboard Cowboy start automatically when you log in – click the menu bar icon and select “Open at Login”
